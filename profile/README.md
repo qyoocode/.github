@@ -1,59 +1,58 @@
-# Qyoo - Interactive 2D Barcodes
+# Qyoo
 
-## Overview
+Qyoo (pronounced “Q”) connects a recognizable visual symbol to digital experiences.
+The Qyoo 4.0 product combines iOS scanning and web resolution with web content,
+interactive experiences, native actions and augmented reality.
 
-Welcome to **QyooCode**, the official open-source repositories of Qyoo (pronounced like the letter "q"), a revolutionary approach to 2D barcodes designed to push the boundaries of what barcodes can do in marketing, communication, and interactivity. 
+The visual carrier holds a **36-bit identifier** in a 6×6 grid. A resolver maps
+that identifier to an experience; the symbol itself does not store a URL or an
+experience manifest. Decimal, binary and Base36 links can represent the same ID.
 
-We believe that a simple barcode can go beyond logistics and offer dynamic, personalized experiences. This repository contains the core open-source code and tools to create, manage, and customize qyoos — barcodes designed to deliver rich, context-aware messages while respecting user privacy. Our mission is to empower developers, businesses, and individuals to use qyoos for everything from immersive AR experiences to privacy-first, targeted marketing.
+## Public libraries and tools
 
-## A Brief History of Qyoo
+| Repository | Purpose and status |
+|---|---|
+| [QyooDetector-CPP](https://github.com/qyoocode/QyooDetector-CPP) | Classical detector core with a public C interface. Read its input and qualification limits before integration. |
+| [QyooDetector-iOS](https://github.com/qyoocode/QyooDetector-iOS) | Swift Package wrapping a vendored native detector. Package revision and app integration must be checked separately. |
+| [QyooGenerate-C](https://github.com/qyoocode/QyooGenerate-C) | Historical command-line PNG/SVG generator; reference geometry. |
+| [QyooGenerate-PHP](https://github.com/qyoocode/QyooGenerate-PHP) | Historical server-side PNG generator; reference geometry. |
+| [QyooGenerate-Python](https://github.com/qyoocode/QyooGenerate-Python) | Synthetic rendering and localization datasets, with a historical ML/Core ML experiment. |
+| [Qyoo-Contract-Eth](https://github.com/qyoocode/Qyoo-Contract-Eth) | Experimental ERC-721 Registry/Minter protocol with a Sepolia testnet deployment. This is separate from consumer application availability. |
 
-### The Beginning (2009)
-When Qyoo was first conceived in 2009, scanning a QR code with an iPhone was an unreliable process. Due to shaky hands or poor camera focus, the success rate for scanning a QR code was often around one in seven. Recognizing this limitation, Qyoo set out to create a barcode that could be easily scanned, even in difficult situations (such as an ad on the side of a moving bus). The result was the Qyoo, a barcode designed to work more effectively with phone cameras and capable of capturing valid scans under conditions where QR codes often failed.
+These repositories expose different generations of the implementation. Matching
+payload ordering does not imply identical rendering or camera performance.
+The Python ML demonstration is not the Qyoo 4.0 shipping scanner. The complete
+hosted service and consumer application are not distributed by these six repos.
 
-### Innovating Marketing: Real-Time Contextual Messaging
-Qyoos were developed with the idea that barcodes shouldn’t just serve static, logistical purposes but should be a vehicle for highly-tailored marketing messages. Unlike traditional QR codes which simply direct users to a static webpage without gathering any context, qyoos offer a more dynamic approach. Users can choose to share demographic and device-specific information, enabling businesses to deliver tailored, real-time messages based on who is scanning and the context of their interaction.
+## Product, history and research
 
-Our early applications of qyoos include:
+Qyoo 4.0's experience architecture uses Manifest v1 to describe web, interactive
+web, redirect, native-action and AR content. Availability depends on the client,
+experience and service configuration. Examples do not establish support on every
+device or a scanning success rate.
 
-- **SXSW Macallan Whiskey Pop-up**: Scanning a qyoo would first verify if the user was over 21, unlocking content only for those of legal drinking age.
-- **Baylor Cancer Center Flyer**: Depending on the user's demographic data, the Qyoo would serve personalized health awareness messages, such as prostate cancer information for males or breast cancer awareness for females (or a default Cancer Center message if gender was unknown).
-- **McDonald's & Coca-Cola Partnership**: Although ultimately McDonald’s gave the space to Dr. Pepper, Boxer Creative designed a series of qyoos for Coca-Cola on McDonald's cups. This demonstrated the potential for large-scale marketing campaigns, allowing brands to change the message based on who scanned the code and when.
+Earlier Qyoo demonstrations explored contextual content and physical interactions.
+They are historical evidence, not promises of current services. There is no
+comparative camera benchmark or blanket privacy/personalization guarantee in this
+profile. Consult the current product's privacy information before sharing data.
 
-### Extending Functionality: The Qyoo Circuit
-Qyoos weren’t just about delivering messages—they also had the ability to trigger physical actions. We developed a low-cost circuit (less than $1 per unit) that could respond to BLE iBeacons. One example use case was a seamless box: scanning the qyoo would trigger a magical “ta-da” moment, causing the box to open. This showcased Qyoo's potential to connect the digital world with real-world actions.
+Future physical-symbol designs, including signature cells and CRC-10, remain
+research until implemented and qualified in a published version. Sepolia ownership
+and issuance experiments do not establish a Mainnet deployment, a public minting
+service, a marketplace or cross-chain ownership.
 
-### Interactive Experiences
-Qyoos also integrate with the web and AR technologies. Through JavaScript, we developed animations, games, and even AR experiences — like a 3D chatbot in augmented reality using a USDZ file. The possibilities were endless, giving brands and developers the ability to create immersive and interactive content with just a simple scan.
+## Licensing and contributions
 
-### Patents
+Original software in these repositories is offered under BSD-3-Clause, subject to
+the applicable repository and third-party notices. Review each project's build
+instructions, tests and limitations before contributing or redistributing it.
 
-Qyoo's technology is backed by two key patents that illustrate the innovative nature of the system and the evolution of its capabilities.
+Software copyright licensing and rights in the Qyoo name, symbol and inventions
+are separate matters. The previous profile's asserted exclusive shape restriction
+has not been reconciled with the published software licenses. Patent status,
+trademark rights and any symbol-use policy require owner/legal review. This
+profile does not add a shape-use restriction or assert a patent license.
 
-- [**US Patent US20110149090**](https://patents.google.com/patent/US20110149090): This patent, filed in 2009, focuses on the early design and functionality of qyoos. At the time, QR codes were a popular but flawed marketing technology, especially when it came to mobile scanning. Qyoos were developed to address the challenges of scanning QR codes with early smartphone cameras, offering improved performance even when the user’s hand wasn’t perfectly steady or the lighting conditions weren’t ideal. This patent describes a system that optimizes barcode readability through enhanced code designs and better compatibility with mobile cameras, setting the stage for the sophisticated, data-driven experiences qyoos would later provide.
-
-- [**International Patent WO2015057797A1**](https://patents.google.com/patent/WO2015057797A1/en): This patent, filed in 2015, expands on the original concept by introducing interactive capabilities that go beyond just simple scanning. It focuses on systems and methods for using qyoos in a more integrated digital ecosystem, including augmented reality and near-field communication (NFC). With this patent, qyoos evolved into a platform for personalized experiences and real-world interactions, such as triggering actions in the physical world — like opening a box or initiating an AR sequence. This patent also highlights the ability to gather contextual data (e.g., location, time of day, device motion) to tailor content in real-time, enhancing the user experience far beyond what was possible with traditional QR codes.
-
-These patents lay the foundation for qyoos to not just be a barcode, but a medium that connects physical and digital experiences in powerful, creative ways.
-
-## Philosophy and Response to Feedback
-
-Early feedback suggested that **QR codes were better** because they allowed users to remain outside our ecosystem. Our response? **QR codes are great for logistics, but qyoos are better for dynamic marketing.** Qyoos offered an experience tailored to the user, leveraging data like device motion, time of day, and location (without compromising user privacy) to deliver hyper-relevant content.
-
-We believe that **personalization** is key to effective marketing, and with qyoos, users can choose to share their data in a way that enhances their experience while maintaining control over what they reveal.
-
-## The Future of Qyoo: Decentralized and Owned by You
-
-As we continue to innovate, we are pivoting to a **decentralized model**. Initially, qyoos were managed through a centralized database. Now, we are releasing qyoos to the **blockchain**, making them available to individuals who can control their own qyoos independently of our platform. With this new model, the owner of each qyoo can decide where it points, what message it delivers, and how it is used.
-
-Qyoos will no longer be limited to our centralized system. Owners will have complete control while we remain available to guide and support better messaging strategies. The possibilities for qyoos are now endless, and we invite you to join us in shaping the future of barcodes.
-
-## Get Involved
-
-We believe in open-source innovation and want to empower developers and creatives to take qyoos to new heights. While we are releasing most of the Qyoo code we have developed for any purpose, there is **one aspect we want to retain control over**: the **Qyoo shape** itself. The distinct circle with squared edge is integral to the Qyoo identity, and maintaining exclusivity over this shape is crucial for avoiding confusion in the public sphere. Since qyoos resolve to numbers, having multiple systems using this shape would cause conflicts, making it difficult for people to know which system they are interacting with.
-
-Other than this single restriction on the Qyoo shape, we encourage you to explore, innovate, and adapt the technology however you see fit. We’re also open to conversations about new ideas, applications, and collaborations — no compensation required on our end. We want qyoos to be a platform for creativity and engagement, and we're here to help bring your vision to life.
-
-This `qyoocode` repository includes all the tools you need to start creating, customizing, and deploying qyoos. Whether you want to use qyoos for personalized marketing campaigns, build interactive experiences, or integrate them with AR/VR, this is your starting point. 
-
-Explore the code, contribute your own features, and let’s make qyoos an open platform for innovation!
+Report defects with the repository revision, reproducible input and observed
+result. For suspected credentials or vulnerabilities, use GitHub's private
+vulnerability reporting where available; do not post secrets in public issues.
