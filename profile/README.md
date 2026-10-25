@@ -1,6 +1,7 @@
 # Qyoo
 
-Qyoo (pronounced “Q”) connects a recognizable visual symbol to digital experiences.
+Qyoo (pronounced “Q”) is maintained by **Pushplay LLC** and connects a
+recognizable visual symbol to digital experiences.
 The Qyoo 4.0 product combines iOS scanning and web resolution with web content,
 interactive experiences, native actions and augmented reality.
 
@@ -12,11 +13,11 @@ experience manifest. Decimal, binary and Base36 links can represent the same ID.
 
 | Repository | Purpose and status |
 |---|---|
-| [QyooDetector-CPP](https://github.com/qyoocode/QyooDetector-CPP) | Classical detector core with a public C interface. Read its input and qualification limits before integration. |
-| [QyooDetector-iOS](https://github.com/qyoocode/QyooDetector-iOS) | Swift Package wrapping a vendored native detector. Package revision and app integration must be checked separately. |
+| [QyooDetector-CPP](https://github.com/qyoocode/QyooDetector-CPP) | Reference classical detector core with a public C interface and documented qualification limits. |
+| [QyooDetector-iOS](https://github.com/qyoocode/QyooDetector-iOS) | Reference Swift Package wrapping the native detector. Consumer app integration is separately qualified. |
 | [QyooGenerate-C](https://github.com/qyoocode/QyooGenerate-C) | Historical command-line PNG/SVG generator; reference geometry. |
 | [QyooGenerate-PHP](https://github.com/qyoocode/QyooGenerate-PHP) | Historical server-side PNG generator; reference geometry. |
-| [QyooGenerate-Python](https://github.com/qyoocode/QyooGenerate-Python) | Synthetic rendering and localization datasets, with a historical ML/Core ML experiment. |
+| [QyooGenerate-Python](https://github.com/qyoocode/QyooGenerate-Python) | Reference synthetic renderer/dataset source and experimental ML/Core ML code; unverified assets excluded from the current tree. |
 | [Qyoo-Contract-Eth](https://github.com/qyoocode/Qyoo-Contract-Eth) | Experimental ERC-721 Registry/Minter protocol with a Sepolia testnet deployment. This is separate from consumer application availability. |
 
 These repositories expose different generations of the implementation. Matching
@@ -43,15 +44,15 @@ service, a marketplace or cross-chain ownership.
 
 ## Licensing and contributions
 
-Original software in these repositories is offered under BSD-3-Clause, subject to
-the applicable repository and third-party notices. Review each project's build
-instructions, tests and limitations before contributing or redistributing it.
+Qyoo-owned software uses **BSD-3-Clause**, subject to each repository’s existing
+copyright notices. Third-party code retains its applicable license, including
+Boost, libgd and MIT notices. Previously MIT-licensed contract files keep those
+grants. See each repository’s LICENSE and third-party notices for exact scope.
 
-Software copyright licensing and rights in the Qyoo name, symbol and inventions
-are separate matters. The previous profile's asserted exclusive shape restriction
-has not been reconciled with the published software licenses. Patent status,
-trademark rights and any symbol-use policy require owner/legal review. This
-profile does not add a shape-use restriction or assert a patent license.
+Qyoo is the project and product name used by Pushplay LLC. Name and branding
+statements are separate from the BSD software license; this profile imposes no
+additional restriction on use of the Qyoo visual shape. It makes no claim about
+patent status or a patent license.
 
 Report defects with the repository revision, reproducible input and observed
 result. For suspected credentials or vulnerabilities, use GitHub's private

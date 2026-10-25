@@ -1,22 +1,15 @@
-# Organization profile audit
+# Organization profile cleanup
 
-Inspected public main `153098e205882f9d75859f1c49559b6ab2445d6c`.
-Classification: organization documentation. Prepared on a separate audit branch.
+Qyoo is maintained by Pushplay LLC. The public profile and FAQ now describe the
+36-bit symbol, reference tools and experimental work without unsupported QR,
+privacy, Mainnet or production-support claims. The hosted product and private
+consumer application remain separate from these six code repositories.
 
-- HIGH: prior profile asserted a Qyoo-shape restriction while software licenses
-  offer BSD-3-Clause. Owner/legal review must distinguish copyright, patent and
-  trademark matters; no enforceable restriction or patent status was invented.
-- MEDIUM: unsupported scan-performance comparisons, blanket privacy claims,
-  circuit cost, partnership assertions and blockchain rollout language lacked
-  repository evidence. Replaced with bounded product/tool descriptions.
-- MEDIUM: public tools represented multiple generations; profile now separates
-  product capabilities, historical demonstrations, experimental contracts and
-  research. It does not advertise signature-cell/CRC-10 as shipped.
-- LOW: prose no longer implies these six repositories include the entire hosted
-  product. Original BSD license retained.
+BSD-3-Clause remains the license for Qyoo-owned software; original copyright
+statements and applicable third-party/MIT grants remain unchanged. The profile
+and FAQ impose no exclusive-shape restriction or patent claim. Name/branding
+statements are separate from software licensing.
 
-Verification: `git diff --check` PASS. Manual review of four public-main commits,
-tracked files, links and licensing language PASS within stated limits. Redacted
-history pattern scan: no credential matches; this is not an exhaustive secret or
-legal audit. Public target URLs are repository links; no release/push/merge was
-performed. Legal approval remains a publication gate for rights statements.
+Support is best effort. Security guidance requests private reporting where
+available and no longer claims a cybersecurity team, absence of sensitive data or
+PCI compliance. No source behavior, repository visibility or history is changed.
