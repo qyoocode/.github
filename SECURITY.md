@@ -1,22 +1,15 @@
-# Security Policy
+# Security policy
 
-## Reporting a Vulnerability
+Qyoo’s public repositories are maintained by Pushplay LLC. Reference and
+experimental status is documented per repository; publication is not a security
+certification or a compliance claim.
 
-We take security seriously at Qyoo and appreciate your help in responsibly disclosing any security vulnerabilities you may find. If you discover a vulnerability, please report it to us by creating a new GitHub issue in the affected repository.
+For a suspected vulnerability, use the affected repository’s **Security → Report a
+vulnerability** option when available. If private reporting is unavailable, open a
+public issue requesting a private contact without including exploit details,
+credentials, personal information or sensitive inputs. Do not publish sensitive
+details while arranging a private report.
 
-### Guidelines for Responsible Disclosure
-
-Please follow these guidelines when reporting a vulnerability:
-
-1. Provide a detailed description of the vulnerability, including steps to reproduce it.
-2. Do not disclose the vulnerability publicly until we have had a reasonable amount of time to address it.
-3. Do not engage in any activities that could potentially harm the application, its users, or the data it processes.
-
-## Security Practices
-
-- Our open source projects are intended to help build a community, share code, teach others, and gain insights from outside our organization.
-- No sensitive data is stored in our open source projects, and our cybersecurity team routinely reviews them.
-- We do not currently implement authentication in our open source projects.
-- We follow PCI compliance guidelines in our projects.
-
-Thank you for your contributions to Qyoo's open source projects and for helping us maintain a secure environment for our community.
+Include the affected revision, environment and a minimal reproduction in the
+private report. Avoid testing against third-party systems or production data
+without the operator’s permission. No response-time guarantee is offered.
